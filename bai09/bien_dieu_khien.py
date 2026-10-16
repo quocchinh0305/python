@@ -1,0 +1,20 @@
+import tkinter as tk
+cua_so=tk.Tk()
+cua_so.title("Ví dụ về biến điều khiển")
+cua_so.geometry("300x220")
+bien_ho_ten=tk.StringVar(value="Nguyen Van A")
+bien_tuoi=tk.IntVar(value=18)
+bien_dong_y_dieu_khoan=tk.BooleanVar(value=False)
+tk.Label(cua_so,text="Họ tên:").grid(row=0,column=0,pady=10, padx=10,sticky="w")
+tk.Entry(cua_so,textvariable=bien_ho_ten).grid(row=0,column=1,pady=10,padx=10)
+tk.Label(cua_so,text="Tuổi:").grid(row=1,column=0,pady=10, padx=10,sticky="w")
+tk.Entry(cua_so,textvariable=bien_tuoi).grid(row=1,column=1,pady=10,padx=10)
+tk.Checkbutton(cua_so,text="Đồng ý điều khoản",variable=bien_dong_y_dieu_khoan).grid(row=2,column=0,pady=10,columnspan=2)
+
+def xem_gia_tri_bien():
+    print("Họ tên(StringVar)",bien_ho_ten.get())
+    print("Tuổi(IntVar)",bien_tuoi.get())
+    print("Đồng ý điều  khoản(BooleanVar):",bien_dong_y_dieu_khoan.get())
+    bien_tuoi.set(bien_tuoi.get()+1)
+tk.Button(cua_so,text="Xem giá trị biến:",command=xem_gia_tri_bien).grid(row=3,column=0,pady=10,columnspan=2)
+cua_so.mainloop()

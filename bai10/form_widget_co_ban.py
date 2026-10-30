@@ -11,7 +11,6 @@ class FormThongTin(QWidget):
         self.chon_thanh_pho.addItems(["Ha Noi","Da Nang","TP HCM","Hue"])
         nut_xac_nhan=QPushButton("XAC NHAN")
         self.nhan_ket_qua=QLabel("")
-        layout=QVBoxLayout()
         layout = QVBoxLayout()
         layout.addWidget(QLabel("Ho ten:"))
         layout.addWidget(self.o_nhap_ten)

@@ -1,8 +1,4 @@
 import tkinter as tk
-
-from bai08.cua_so_dau_tien import cua_so
-
-
 def xu_ly_submit():
     ho_ten=entry_ho_ten.get()
     tuoi=entry_tuoi.get()

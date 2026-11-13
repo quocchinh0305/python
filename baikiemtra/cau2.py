@@ -106,7 +106,7 @@ class QuanLySanPham(tk.Tk):
     def hien_thi_danh_sach(self, ds):
         self.listbox.delete(0, tk.END)
         for sp in ds:
-            # Sửa lại thành 1 dòng hoặc dùng dấu ngoặc để nối chuỗi an toàn
+
             dong = f"{sp['MaSP']} - {sp['TenSP']} - {sp['Gia']:,.0f}đ - SL: {sp['SoLuong']}"
             self.listbox.insert(tk.END, dong)
 
